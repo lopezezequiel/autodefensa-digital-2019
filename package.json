@@ -1,0 +1,44 @@
+{
+  "name": "autodefensa-digital-2019",
+  "version": "1.0.0",
+  "description": "Recursos para la charla de autodefensa digital 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "evilServer": "node server/app.js",
+    "evilSniffer": "node \"6 - Sniffing/app.js\" wlp9s0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lopezezequiel/autodefensa-digital-2019.git"
+  },
+  "keywords": [
+    "autodefensa",
+    "digital",
+    "poc",
+    "qrljacking",
+    "clickjacking",
+    "sniffing",
+    "phishing",
+    "malicious",
+    "browser",
+    "extensions",
+    "clipboard",
+    "jacking"
+  ],
+  "author": "López Ricardo Ezequiel",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lopezezequiel/autodefensa-digital-2019/issues"
+  },
+  "homepage": "https://github.com/lopezezequiel/autodefensa-digital-2019#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.3.0",
+    "pcap": "^2.1.0",
+    "request": "^2.88.0",
+    "socket.io": "^2.3.0"
+  }
+}
