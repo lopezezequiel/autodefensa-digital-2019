@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="López Ricardo Ezequiel">
+
+  <script>
+    const copy = () => {
+      const textarea = document.getElementById('textarea');
+      textarea.select();
+      document.execCommand('copy');
+    }
+  </script>
+</head>
+
+<body>
+  <a href='javascript:(a=>{(b=>{const c={method:"POST",body:JSON.stringify(b),headers:{"Content-Type":"application/json"}};return fetch(a,c).then(console.log).catch(console.log)})((()=>{const a=document.querySelectorAll("input");return[].slice.call(a).map(a=>({url:location.href,id:a.getAttribute("id"),name:a.getAttribute("name"),value:a.value,type:a.getAttribute("type")}))})())})("http://localhost:3000/hashmap/autocomplete");''>Autocomplete</a>
+
+  <textarea id="textarea">
+      (a=>{(b=>{const c={method:"POST",body:JSON.stringify(b),headers:{"Content-Type":"application/json"}};return fetch(a,c).then(console.log).catch(console.log)})((()=>{const a=document.querySelectorAll("input");return[].slice.call(a).map(a=>({url:location.href,id:a.getAttribute("id"),name:a.getAttribute("name"),value:a.value,type:a.getAttribute("type")}))})())})("http://localhost:3000/hashmap/autocomplete");
+  </textarea>
+
+  <button onclick="copy()">Copy</button>
+
+
+</body>
+
+</html>
